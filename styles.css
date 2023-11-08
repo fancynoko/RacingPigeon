@@ -1,0 +1,116 @@
+/* Add your CSS styling here */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  header {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 34px;
+  }
+  
+  #search-container {
+    position: sticky; /* Sticky position to keep it visible */
+    top: 30px; /* Stick to the top */
+    right: 100px; /* Align to the right */
+    z-index: 1000; /* Ensure it's above other content */
+    padding: 30px;
+    background-color: #fff; /* Background color for visibility */
+    text-align: right;
+  }
+  
+  #search-input {
+    padding: 10px;
+    margin-right: 5px;
+    font-size: 16px;
+  }
+  
+  #search-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #search-button:hover {
+    background-color: #0056b3;
+  }
+
+#reset-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#reset-button:hover {
+  background-color: #0056b3;
+}
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* creates four columns */
+    gap: 20px; /* space between images */
+    padding: 20px;
+    max-width: 1200px; /* constrain the gallery width if necessary */
+    margin: auto; /* center the gallery in the page */
+  }
+  
+  .gallery article {
+    border: 1px solid #ddd;
+    padding: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .gallery article:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    transform: translateY(-5px) scale(1.05); /* Slight lift and scale */
+  }
+  
+  .gallery img {
+    width: 200px; /* makes the image fill the container */
+    height: auto; /* keeps the aspect ratio */
+    max-height: 200px; /* limit the height of the images */
+    object-fit: cover; /* ensures the image covers the area, can be adjusted to 'contain' for no cropping */
+  }
+  
+  .pagination {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .pagination button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .pagination button.active {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .gallery {
+      grid-template-columns: repeat(2, 1fr); /* two columns on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .gallery {
+      grid-template-columns: 1fr; /* one column on very small screens */
+    }
+  }
+  
